@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang = "es">
+<head>
+    <meta charset = "UTF-8"/>
+    <h1 style="color:white; text-align: center "> Registros</h1>
+	<title>Registros</title>
+    <link type="text/css" rel="stylesheet" href="css/z.css" media="screen"/>
+</head>
+<body>
+<table class="responsive-table" class="striped">
+        <thead>
+          <tr>
+              <th>No. Visitante</th>
+              <th>Fecha</th>
+              <th>Hora</th>
+              <th>Sexo</th>
+              <th>Nombre</th>
+              <th>Empresa</th>
+              <th>Email</th>
+              <th>Area que visita</th>
+              <th>Acompañantes</th>
+          </tr>
+        </thead>
+
+        <tbody>
+        <?php 
+        foreach ($datosConsultaT as $dato){
+          echo '<tr> <td>'.$dato["IdVisita"]."<br/>".'</td>';
+          echo '<td>'.$dato["Fecha"]."<br/>".'</td>';
+          echo '<td>'.$dato["Hora"]."<br/>".'</td>';
+          echo '<td>'.$dato["Sexo"]."<br/>".'</td>';
+          echo '<td>'.$dato["Nombre"]."<br/>".'</td>';
+          echo '<td>'.$dato["Empresa"]."<br/>".'</td>';
+          echo '<td>'.$dato["Email"]."<br/>".'</td>';
+          echo '<td>'.$dato["AreaVisita"]."<br/>".'</td>';
+          echo '<td>'.$dato["NumAcompa"]."<br/>".'</td> </tr>';
+        }   
+        ?>
+        </tbody>
+      </table>
+</body>
+</html>
